@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { banner1Styles } from "./banner1";
-const banner2Styles = {
+export const banner2Styles = {
   title_: { color: "#FFF", fontWeight: "500", letterSpacing: "-0.352px" },
   content_: {
     color: "#797979",

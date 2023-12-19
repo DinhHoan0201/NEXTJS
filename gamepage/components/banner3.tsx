@@ -1,6 +1,7 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
+import { headerStyles } from "./header";
 const banner3Styles = {
   title_: {
     fontSize: "42px",
@@ -8,11 +9,17 @@ const banner3Styles = {
     letterSpacing: "-0.457px",
     lineHeight: "50px",
   },
+  content_: {
+    fontWeight: "500",
+    width: "325px",
+    lineHeight: "150%",
+    letterSpacing: "-0.352px",
+  },
 };
 const Banner3 = () => {
   return (
     <>
-      <Container>
+      <Container sx={{ p: "112px 0px 95px 0px" }}>
         <Box
           sx={{
             backgroundImage: `url("./images/bannerbg1.png")`,
@@ -23,24 +30,46 @@ const Banner3 = () => {
           <Stack sx={{ p: "32px 0px 32px 0px" }}>
             <Grid container>
               <Grid item xs={5}>
-                <Stack>
-                  <Stack direction="row" spacing={2.3} justifyContent="center">
-                    <Image
-                      src="./icon/Logo1.svg"
-                      alt=" "
-                      width={138}
-                      height={127}
-                    />
-                    <Stack direction="column" justifyContent="center">
-                      <Typography sx={banner3Styles.title_}>Games</Typography>
-                      <Typography sx={banner3Styles.title_}>
-                        Launcher
+                <Stack direction="column" spacing={8} sx={{ pt: "40px" }}>
+                  <Stack direction="column" spacing={4}>
+                    <Stack
+                      direction="row"
+                      spacing={2.3}
+                      justifyContent="center"
+                    >
+                      <Image
+                        src="./icon/Logo1.svg"
+                        alt=" "
+                        width={138}
+                        height={127}
+                      />
+                      <Stack direction="column" justifyContent="center">
+                        <Typography sx={banner3Styles.title_}>Games</Typography>
+                        <Typography sx={banner3Styles.title_}>
+                          Launcher
+                        </Typography>
+                      </Stack>
+                    </Stack>
+                    <Stack direction="row" justifyContent="center">
+                      <Typography variant="h4" sx={banner3Styles.content_}>
+                        Todos os seus jogos em um só lugar.
                       </Typography>
                     </Stack>
                   </Stack>
-                  <Typography>Todos os seus jogos em um só lugar.</Typography>
+                  <Stack direction="row" justifyContent="center">
+                    <Button
+                      variant="contained"
+                      sx={{
+                        ...headerStyles._button,
+                        color: "black",
+                        padding: "15px 96px 15px 96px",
+                        fontWeight: "800",
+                      }}
+                    >
+                      Dowload
+                    </Button>
+                  </Stack>
                 </Stack>
-                <Stack></Stack>
               </Grid>
               <Grid
                 item
